@@ -1,0 +1,62 @@
+h1, h2,h3{
+    text-align: center!important;
+}
+
+
+
+/*数字注释*/
+/*
+a.Note.Number{
+    font-family: "SourceCodePro5"!important;
+    font-size:.7em;
+    padding: 0 .25em;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    text-indent:0;
+    line-height:100%;
+    margin-right:.3em;
+    color:#fff!important;
+    background-color: #C7823F!important;
+}
+aside{
+    padding-left:0;
+}
+
+aside a.amzn{
+    font-family: "SourceCodePro5"!important;
+    font-size:.9em;
+    padding: 0 .25em;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    line-height:100%;
+    margin-right:.3em;
+    margin-left:0;
+    color:#fff!important;
+    background-color: #C7823F!important;
+}
+*/
+@media (device-aspect-ratio:1280/800), (device-aspect-ratio:800/1280),
+       (device-aspect-ratio:1920/1080), (device-aspect-ratio:1080/1920),
+       (device-aspect-ratio:1800/1080), (device-aspect-ratio:1080/1800),
+       (device-aspect-ratio:1200/1920), (device-aspect-ratio:1920/1200),
+       (device-aspect-ratio:2560/1440), (device-aspect-ratio:1440/2560),
+       (device-aspect-ratio:2040/1080), (device-aspect-ratio:1080/2040),
+       (device-aspect-ratio:2040/1080), (device-aspect-ratio:1080/2040),
+       (device-aspect-ratio:568/320), (device-aspect-ratio:320/560),
+       (device-aspect-ratio:360/240), (device-aspect-ratio:240/360),
+       (device-aspect-ratio:320/480), (device-aspect-ratio:480/320),
+       (device-aspect-ratio:21/9), (device-aspect-ratio:9/21),
+       (device-aspect-ratio:18/9), (device-aspect-ratio:9/18),
+       (device-width:1024px) and (device-height:768px), 
+       (device-width:768px) and (device-height:1024px),
+       (max-device-aspect-ratio:9/16) and (orientation: portrait),
+       (min-device-aspect-ratio:16/9) and (orientation: landscape) {
+    h1, h2, h3, h4, a.Note, body.Copyright .title, body.Navigate .toc-title {
+        color: #2277D4!important;
+    }
+    body.Copyright p {
+        border-color: #2277D4!important;
+    }
+}

@@ -1,0 +1,944 @@
+/*Author:墨茗*/
+/*Email:momingxu@gmail.com*/
+/*ePub3.0*/
+
+/*---英文字体---*/
+@font-face{font-family:"BookmanOld";src:url("../Fonts/BookmanOld.otf"),local("Bookman Old Style");}
+@font-face{font-family:"BookmanOld";font-style:italic;src:url("../Fonts/BookmanOldI.otf"),local("Bookman Old Style Italic");}
+@font-face{font-family:"BookmanOld";font-weight:bold;src:url("../Fonts/BookmanOldB.otf"),local("Bookman Old Style Bold");}
+@font-face{font-family:"BookmanOld";font-style:italic;font-weight:bold;src:url("../Fonts/BookmanOldBI.otf"),local("Bookman Old Style Bold Italic");}
+@font-face { font-family: "TimesNewRoman"; src: url("../Fonts/TimesNewRoman.otf"), local("Times New Roman"); }
+@font-face { font-family: "TimesNewRoman"; font-style: italic; src: url("../Fonts/TimesNewRomanI.otf"), local("Times New Roman Italic"); }
+@font-face { font-family: "TimesNewRoman"; font-weight: bold; src: url("../Fonts/TimesNewRomanB.otf"), local("Times New Roman Bold"); }
+@font-face { font-family: "TimesNewRoman"; font-weight: bold; font-style: italic; src: url("../Fonts/TimesNewRomanBI.otf"), local("Times New Roman Bold Italic"); }
+
+/*---带圈数字字体---*/
+@font-face{font-family:"NoteNubmerSymbol";src:url("../Fonts/NoteNubmerSymbol.otf"),local("Note Nubmer Symbol");}
+@font-face {
+    font-family: "SourceCodePro5";
+    src: url("../Fonts/SourceCodePro5.otf"),
+    local("Source Code Pro");
+}
+
+/*---中文字体---*/
+@font-face{font-family:"BoYaFangKanSongBold";src:url("../Fonts/BoYaFangKanSongBold.otf"),local("方正博雅方刊宋_GBK");}
+@font-face{font-family:"FzXiaoBiaoSong";src:url("../Fonts/FzXiaoBiaoSong.otf"),local("方正小标宋_GBK");}
+@font-face{font-family:"AbFangSong";src:url("../Fonts/AbFangSong.otf"),local("Adobe 仿宋 Std");}
+@font-face{font-family:"AbKaiTi";src:url("../Fonts/AbKaiTi.otf"),local("Adobe 楷体 Std");}
+@font-face{font-family:"AbHeiTi";src:url("../Fonts/AbHeiTi.otf"),local("Adobe 黑体 Std");}
+@font-face{font-family:"SourceHanSansSc4";font-weight:400;src:url("../Fonts/SourceHanSansSc4.otf"),local("思源黑体");}
+@font-face{font-family:"SourceHanSansSc5";font-weight:500;src:url("../Fonts/SourceHanSansSc5.otf"),local("思源黑体");}
+
+* {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+.full{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+/*标题*/
+h1, h2.Heading {
+    font-family: "FzXiaoBiaoSong"!important;
+    text-align: left;
+    font-size: 1.5em;
+    margin: 3em 0 4em 0;
+    line-height: 140%;
+}
+h1.Heading{
+    margin-top:30%;
+}
+
+
+h2 {
+    font-family: "FzXiaoBiaoSong"!important;
+    text-align: left;
+    font-size: 1.3em;
+    margin: 2.5em 0 2em 0;
+    line-height: 120%;
+}
+
+
+h3 {
+    font-family: "FzXiaoBiaoSong"!important;
+    text-align: left;
+    font-size: 1.1em;
+    margin: 1.5em 0 1.5em 0;
+    line-height: 120%;
+}
+
+h4 {
+    font-family: "FzXiaoBiaoSong"!important;
+    text-align: left;
+    font-size: 1em;
+    margin: 1.5em 0 1em 0;
+    line-height: 120%;
+}
+
+h5 {
+    font-family: "AbHeiTi"!important;
+    text-align: left;
+    font-size: 1em;
+    margin: 1.5em 0 1.5em 0;
+    line-height: 120%;
+}
+
+h6 {
+    font-family: "AbHeiTi"!important;
+    text-align: left;
+    font-size: 1em;
+    margin: 1em 0 1em 0;
+    line-height: 120%;
+}
+
+small {
+    text-indent: 0;
+    font-size: .9em;
+}
+
+h1 small, h2 small{
+    font-family: "BookmanOld", "AbFangSong"!important;
+}
+
+big {
+    text-indent: 0;
+    font-size: 1.1em;
+}
+
+/*正文*/
+p {
+    font-family: "BookmanOld", "BoYaFangKanSongBold", "STSong", STSong, serif;
+    font-size: 1em;
+    text-indent: 2em;
+    line-height: 150%;
+    margin-top: .6em;
+    margin-bottom: .5em;
+    text-align: justify;
+    word-break: break-all;
+    -webkit-hyphens: auto;
+    -epub-hyphens: auto;
+    hyphens: auto;
+}
+/*字符之间不断行*/
+.NoWrap {
+    white-space: nowrap;
+}
+
+/*分割一般用在带＊号的分节段落上*/
+.Split {
+    margin: 2em 0;
+    text-indent: 0;
+    text-align: center;
+}
+
+
+/*数学公式*/
+.Math {
+    font-family: "Math";
+    text-align: center;
+}
+
+/*居中对齐*/
+.Center {
+    text-align: center;
+    text-indent: 0;
+}
+
+/*右对齐*/
+.Right {
+    text-align: right;
+    text-indent: 0;
+}
+
+/*左对齐*/
+.Left {
+    text-align: left;
+}
+
+/*文章落款人名时间地址等*/
+.Inscribe {
+    text-align: right;
+    text-indent: 0;
+    padding-left: 2em;
+    font-family: "TimesNewRoman", "AbKaiTi", "楷体", "STKai", STKai, serif;
+    margin: 1em 0 2em 0;
+}
+
+p.Inscribe img {
+    height: 1em;
+    width: auto;
+}
+p.author{
+    text-align: center;
+    text-indent: 0;
+    margin-top:-6em;
+    margin-bottom: 6em;
+}
+
+/*取消段首缩进*/
+.NoIndent {
+    text-indent: 0;
+}
+
+/*着重号*/
+.emphasis {
+    text-emphasis: filled dot;
+    -webkit-text-emphasis: filled dot;
+    text-emphasis-position: under;
+    -webkit-text-emphasis-position: under;
+}
+/*段内独行*/
+.block{
+    display: block;
+    padding:.5em 2em;
+}
+/*黑体*/
+strong {
+    font-family: "SourceHanSansSc5", "黑体";
+    font-weight: 500;
+}
+
+/*中文楷体 英文罗马字体*/
+em {
+    font-style: normal;
+    font-family: "TimesNewRomanI", "AbKaiTi", "楷体", "STKai", STKai, serif;
+}
+
+/*--行内引文--*/
+q{
+    font-family: "TimesNewRoman", "AbKaiTi", "楷体", "STKai", STKai, serif;
+}
+q:before, q:after{
+    content: ""!important;
+}
+/*---加粗---*/
+b {
+    font-weight: bold;
+}
+
+/*---斜体---*/
+i {
+    font-style: italic;
+}
+
+/*一般用在书名外文原文的引用*/
+cite {
+    font-style: italic;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none !important;
+    color: #000 !important;
+    text-indent: 0;
+}
+
+a.link {
+    display: inline-block;
+    font-size: 0.75em;
+    vertical-align: middle;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 0 .25em;
+    margin: 0 .25em;
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+/*---文前文后文章---*/
+.Preface p {
+    font-family: "BookmanOld", "AbFangSong"!important;
+}
+
+/*文前页落款*/
+.Preface .Inscribe {
+    font-family: "TimesNewRoman", "AbKaiTi", "楷体", "STKai", STKai, serif;
+    margin: 1.5em 0 0 0;
+    text-align: right;
+}
+
+/*文前页落款在文章开头处*/
+.Preface .Inscribe.Top {
+    font-family: "TimesNewRoman", "AbKaiTi", "楷体", "STKai", STKai, serif;
+    margin: 3em 0 2em 0;
+    text-align: right;
+}
+
+/*---引文---*/
+blockquote {
+    margin: 1.5em 2em;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+blockquote p.Right{
+    padding-left:2em;
+}
+blockquote.Inscribe{
+     margin:30% auto auto auto;
+     padding:0;
+     width:80%;
+}
+blockquote.Inscribe p{
+    text-align: center;
+    text-indent:0;
+}
+blockquote p, 
+.Preface blockquote p,
+blockquote.Quote blockquote p {
+    font-family: "TimesNewRoman", "AbKaiTi", "楷体", "STKai", STKai, serif!important;
+    margin: .5em 0;
+    letter-spacing: 0em;
+}
+
+blockquote h6 {
+    font-family: "SourceHanSansSc4"!important;
+    font-weight: 400;
+    text-align: center;
+}
+
+/*诗文居中的*/
+blockquote.Verse p {
+    text-indent: 0;
+    text-align: center;
+    text-indent: 0;
+}
+
+/*书信楷体的*/
+blockquote.Letter p {
+    font-family: "TimesNewRoman", "AbKaiTi", "楷体", "STKai", STKai, serif!important;
+}
+
+/*章节开头引文*/
+blockquote.Intro p {
+    font-family: "BookmanOld", "AbFangSong"!important;
+}
+
+blockquote.Quote p {
+    font-family: "BookmanOld", "AbFangSong"!important;
+}
+
+blockquote.Quote blockquote {
+    margin-right: 0 !important;
+}
+
+blockquote.Quote blockquote p {
+    font-family: "TimesNewRoman", "AbKaiTi", "楷体", "STKai", STKai, serif;
+}
+
+/*---列表---*/
+
+blockquote.List p {
+    text-indent: -1em;
+    padding-left: 1em;
+}
+
+/*---列表---*/
+ol {
+    margin: 1.5em 0 1.5em 2em;
+    padding: 0 0 0 2em;
+}
+
+ul {
+    margin: 1.5em 0 1.5em 2em;
+    padding: 0 0 0 1.5em;
+}
+blockquote ol,
+blockquote ul{
+    margin: 1.5em 0 1.5em 0;
+    padding: 0 0 0 0;
+}
+ol li, ul li {
+    margin: 0;
+    padding: 0;
+}
+
+li p {
+    text-indent: 0;
+}
+
+/*---表格---*/
+
+/*--表格外框--*/
+.TW{
+    width: 100%;
+    overflow-x: scroll;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    caption-side: top;
+}
+
+caption {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 .8em 0;
+    font-size: .8em;
+    font-family: "SourceHanSansSc4"!important;
+    font-weight: 400;
+}
+
+tbody {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+thead th, thead td, th {
+    font-family: "SourceHanSansSc5"!important;
+    font-weight: 500;
+    background-color: #eee;
+}
+
+td, th {
+    padding: .3em;
+    border: 1px solid #000;
+}
+
+table p {
+    text-indent: 0;
+    font-size: .9em;
+    margin: .1em auto;
+    line-height: 120%;
+    padding: 0;
+}
+
+thead th p, table td p strong {
+    font-family: "SourceHanSansSc5"!important;
+    font-weight: 500;
+}
+
+p.tNote {
+    margin: -1.5em 0 1.5em 0;
+    padding: 0;
+    font-family: "TimesNewRoman", "AbKaiTi", "楷体", "STKai", STKai, serif;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 0;
+    line-height: 130%;
+}
+/*单元格分割线*/
+.tSplitLeft{
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../Images/lineL.png);
+
+}
+.tSplitRight{
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../Images/lineR.png);
+    
+}
+/*单元格内文字居中*/
+.Center p {
+    text-align: center;
+    text-indent: 0;
+}
+
+/*去除单元格边框*/
+.NoBorder *{
+    border: 0 !important;
+}
+
+/*去除单元格背景色*/
+.NoBackground *{
+    background-color: transparent !important;
+}
+
+/*添加单元格背景色*/
+.Background *{
+    background-color: #eee;
+}
+/*平分单元格宽度*/
+table.C2 td{
+    width:50%;
+}
+table.C3 td{
+    width:33.3%;
+}
+table.C4 td{
+    width:25%;
+}
+table.C5 td{
+    width:20%;
+}
+table.C6 td{
+    width:16.6%;
+}
+/*固定单元格宽度*/
+
+td.W2{
+    width:2.5em;
+}
+td.W3{
+    width:3.5em;
+}
+td.W4{
+    width:4.5em;
+}
+
+td.W5{
+    width:5.5em;
+}
+
+td.W6{
+    width:6.5em;
+}
+
+/*---图片---*/
+img{
+    width:100%;
+}
+
+/*行内图片字体*/
+img.Font {
+    height: 1em;
+    width: auto;
+    display: inline-block;
+    vertical-align: -10%;
+    text-indent: 0;
+}
+
+figure {
+    display: block;
+    padding: 1.5em 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+figure img, figure p {
+    width: 100%;
+}
+
+figure p {
+    font-family: "TimesNewRoman", "AbKaiTi", "楷体", "STKai", STKai, serif;
+    text-align: left;
+    text-indent: 0;
+    line-height: 120%;
+    font-size: .8em;
+    margin-top: .1em;
+}
+
+figure figcaption {
+    font-family: "SourceHanSansSc4"!important;
+    text-align: left;
+    margin-bottom: .8em;
+    font-size: .8em;
+    font-weight:400;
+}
+
+figure.Left {
+    float: left;
+    width: 50%;
+    margin-right: .5em;
+    margin-top: .5em;
+    padding: 0;
+    clear: left;
+}
+
+figure.Right {
+    float: right;
+    width: 50%;
+    margin-left: .5em;
+    margin-top: .5em;
+    padding: 0;
+    clear: right;
+}
+
+figure img.Left {
+    width: 50%;
+    float: left;
+    margin-right: .5em;
+    clear: left;
+}
+
+figure img.Right {
+    width: 50%;
+    float: right;
+    margin-left: .5em;
+    clear: right;
+}
+
+/*图片宽度*/
+.W10 {
+    width: 10% !important;
+    height: auto !important;
+}
+
+.W15 {
+    width: 15% !important;
+    height: auto !important;
+}
+
+.W20 {
+    width: 20% !important;
+    height: auto !important;
+}
+
+.W25 {
+    width: 25% !important;
+    height: auto !important;
+}
+
+.W30 {
+    width: 30% !important;
+    height: auto !important;
+}
+
+.W35 {
+    width: 35% !important;
+    height: auto !important;
+}
+
+.W40 {
+    width: 40% !important;
+    height: auto !important;
+}
+
+.W45 {
+    width: 45% !important;
+    height: auto !important;
+}
+
+.W50 {
+    width: 50% !important;
+    height: auto !important;
+}
+
+.W55 {
+    width: 55% !important;
+    margin: 0 22.5% !important;
+}
+
+.W60 {
+    width: 60% !important;
+    margin: 0 20% !important;
+}
+
+.W65 {
+    width: 65% !important;
+    margin: 0 17.5% !important;
+}
+
+.W70 {
+    width: 70% !important;
+    margin: 0 15% !important;
+}
+
+.W75 {
+    width: 75% !important;
+    margin: 0 12.5% !important;
+}
+
+.W80 {
+    width: 80% !important;
+    margin: 0 10% !important;
+}
+
+.W85 {
+    width: 85% !important;
+    margin: 0 7.5% !important;
+}
+
+.W90 {
+    width: 90% !important;
+    margin: 0 5% !important;
+}
+/*图片高度设置*/
+img.H1 {
+    height: 1em !important;
+    width: auto !important;
+}
+
+img.H2 {
+    height: 2em !important;
+    width: auto !important;
+}
+
+img.H3 {
+    height: 3em !important;
+    width: auto !important;
+}
+img.H4 {
+    height: 4em !important;
+    width: auto !important;
+}
+
+
+
+sub,
+sup {
+    font-size: 0.75rem;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+/*---注释---*/
+a.Note {
+    font-size: 0.7rem;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    text-indent: 0;
+    text-decoration: underline;
+    color: #000 !important;
+    font-family: "NoteNubmerSymbol","BookmanOld"!important;
+    top: -0.5em;
+}
+
+aside#footnote0{
+    font-family: "FzXiaoBiaoSong"!important;
+    text-align: left;
+    font-size: 1.1em;
+    margin: 3em 0 3em 0;
+    line-height: 120%;
+    display: block;
+    height:0;
+    padding-left:0;
+}
+aside{
+    margin-top: .6em;
+    margin-bottom: .5em;
+    padding-left:1em;
+}
+
+a.amzn {
+    font-family: "NoteNubmerSymbol","BookmanOld"!important;
+    margin-left: -1.5em;
+    color: #000 !important;
+    text-decoration: underline;
+    margin-right: .5em;
+}
+
+aside p {
+    font-family: "BookmanOld", "BoYaFangKanSongBold", "STSong", STSong, serif;
+    font-size: .9em;
+    text-indent: 0;
+    margin:.3em 0 0 0;
+    line-height: 130%;
+    text-align: justify;
+    padding: 0 .4em;
+}
+
+
+/*---书名页---*/
+
+
+
+.Wapper,
+body.BookName{
+    width:100%;
+    height:100%;
+    padding: 0;
+    margin: 0;
+     position: relative;
+}
+body.BookName p.logo {
+font-size:.9em;
+    width:100%;
+    bottom: 1em;
+    left: 0;
+     position: absolute;
+    right: 0;
+    font-family: "SourceHanSansSc4"!important;
+    text-align: center;
+    padding-bottom:.5em;
+    
+}
+img.BookName {
+    max-width: 100%;
+    max-height: 100%;
+    line-height: 0;
+}
+
+body.BookName p {
+    font-family: "TimesNewRoman", "AbKaiTi", "楷体", "STKai", STKai, serif;
+    text-align: center;
+    text-indent: 0;
+    margin: 0;
+    line-height: 120% !important;
+}
+
+body.BookName .Main{
+    padding: 20% 0 6em 0;
+}
+body.BookName p {
+    text-indent: 0;
+}
+
+body.BookName .Main p {
+    font-family: "SourceHanSansSc4"!important;
+    font-weight: 400;
+}
+body.BookName .Main p.Title {
+    font-family: "FzXiaoBiaoSong"!important;
+    font-size: 2em;
+    line-height: 130% !important;
+    padding: 0;
+    margin:0;
+    text-align: center;
+}
+
+body.BookName .Main p.subTitle {
+    font-family: "FzXiaoBiaoSong"!important;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+body.BookName .Main p.Author {
+    font-size: .9em;
+    margin: .8em 0 0 0;
+    text-align: center;
+    font-family: "SourceHanSansSc4"!important;
+}
+
+
+
+
+body.BookName p.logo img {
+    height: 1em;
+    vertical-align: bottom;
+}
+
+
+
+
+
+/*---epub3目录---*/
+body.Navigation h1 {
+    text-align: center;
+    font-family: "FzXiaoBiaoSong"!important;
+    font-size: 1.3em;
+    padding: 3em 0 4em 0;
+    margin:0;
+    line-height: 100%;
+}
+
+body.Navigation nav ol{
+    list-style: none;
+    margin: 0 0 0 1em;
+    padding: 0;
+    text-align: left;
+}
+body.Navigation nav li{
+    list-style: none;
+    padding: .3em 0 0 0;
+    margin: 0;
+    text-align: left;
+    line-height:120%;
+    font-size:1rem;
+    clear:both;
+}
+.C2 > li{
+    width:50%;
+    float:left;
+    clear:none!important;
+}
+.Center li a{
+    text-align: center;
+}
+body.Navigation a {
+    display:block;
+    color:#000;
+    font-size:inherit;
+    line-height: 120%;
+    font-family: "BookmanOld", "BoYaFangKanSongBold"!important;
+}
+body.Navigation a span{
+    color:#000!important;
+}
+body.Navigation nav ol{
+    margin:0;
+    padding:0;
+}
+body.Navigation ol.Level-2,
+body.Navigation ol.Level-3{
+    padding-left:1em;
+
+}
+/*---一级目录---*/
+body.Navigation ol.Level-1{
+}
+
+body.Navigation ol.Level-1 > li{
+    font-size:1rem;
+    margin-top:.3em;
+}
+
+body.Navigation.Part ol.Level-1 > li{
+    text-align: center;
+    padding-top:2em;
+    font-size:1.3rem;
+}
+body.Navigation.Part ol.Level-1 > li > a{
+    font-family: "AbHeiTi"!important;
+}
+/*---二级目录---*/
+body.Navigation ol.Level-2 > li{
+    font-size:1rem;
+    padding-top:1em;
+}
+body.Navigation.Part ol.Level-2 > li{
+    font-size:1.1rem;
+    padding-top:1em;
+}
+
+/*---三级目录---*/
+body.Navigation ol.Level-3 > li{
+}
+
+/*---四级目录---*/
+body.Navigation ol.Level-4 > li{
+}
+
+/*---五级目录---*/
+body.Navigation ol.Level-5 > li{
+}
+
+/*---六级目录---*/
+body.Navigation ol.Level-6 > li{
+}
+
+body.Navigate a span {
+    font-family: inherit;
+    color: #000;
+}
+
+/*---简单版权页---*/
+body.Copyright p {
+    text-indent: 0;
+    margin: 0.3em 0.3em;
+    text-align: left;
+    border-left: solid 0.2em;
+    padding-left: 0.3em;
+}
+
+body.Copyright p.title {
+    text-align: center;
+    font-family: "FzXiaoBiaoSong"!important;
+    font-size: 1.3em;
+    margin: 2em 0 2em 0;
+    line-height: 140%;
+    border: 0;
+}
+
+body.Copyright p strong {
+    font-family: "SourceHanSansSc4"!important;
+    font-weight: 400;
+}

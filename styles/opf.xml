@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:title>春秋：五霸迭兴</dc:title>
+    <dc:language>zh</dc:language>
+    <dc:creator>朱良 著</dc:creator>
+    <dc:publisher>上海：上海文化出版社</dc:publisher>
+    <dc:rights>后浪出版咨询（北京）有限责任公司</dc:rights>
+    <dc:identifier id="BookId">urn:isbn:978-7-5535-1787-2</dc:identifier>
+    <meta property="ibooks:specified-fonts">true</meta>
+    <meta name="cover" content="Cover.jpg" />
+    <meta name="Sigil version" content="0.9.9" />
+    <meta property="dcterms:modified">2018-11-08T21:39:47Z</meta>
+  </metadata>
+
+  <guide>
+    <reference type="toc" title="目录" href="Text/Navigation.xhtml"/>
+    <reference type="text" title="正文" href="Text/Section001.xhtml"/>
+  </guide>
